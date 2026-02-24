@@ -1,0 +1,10 @@
+import re
+
+def check(password):
+    if len(password) < 8:
+        return "Weak"
+    if re.search("[A-Z]", password) and re.search("[0-9]", password):
+        return "Strong"
+    return "Medium"
+
+print(check("Password123"))
